@@ -3,14 +3,19 @@
  */
 
 const path = require('path');
+const webpack = require('webpack');
+//const ExtractTextPlugin = require("extract-text-webpack-plugin");
+//const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     // removing 'src' directory from entry point, since 'context' is taking care of that
-    entry: ["./code.ts"],
+    entry: {
+        main:"./app.ts"
+    },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        filename: "bundle.js"
     },
     devServer: {
         //contentBase: path.resolve(__dirname, "./dist/assets/media"), //static content location

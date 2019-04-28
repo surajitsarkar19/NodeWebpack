@@ -3,3 +3,4 @@ import { map, mapTo, switchMap, tap, mergeMap, takeUntil, filter, finalize } fro
 
 console.log(Observable);
 console.log(Subscription);
+addItem("I am good")
